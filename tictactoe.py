@@ -33,18 +33,18 @@ def enter_move(board):
             print("There are no places to play")
             return
         
-        movement = int(input("Elige la casilla: "))
+        movement = int(input("Choose a box: "))
         x = (movement - 1) // 3
         y = (movement - 1) % 3
 
         if type(board[x][y]) is int:
             board[x][y] = "O"
         else:
-            print("Casilla ocupada")
+            print("Occupied box")
             enter_move(board)
 
     except:
-        print("Posicion erronea")
+        print("Incorrect position")
         enter_move(board)
 
 #Bot movement
